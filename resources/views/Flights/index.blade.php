@@ -9,10 +9,13 @@
 <body>
 
 
-
-<p> FLIGHT </p>
+<p> FLIGHTS </p>
 @foreach($flights as $flight)
-    <li>{{ $flight->id}}</li>
+    <li>
+
+        <a href="flights/{{ $flight->id }}"> {{ $flight->from }} - {{ $flight->destination }} </a>
+
+    </li>
 @endforeach
 
 @section('title')

@@ -13,25 +13,19 @@
 
         <div>
 
-            <input type="number" name="id" placeholder="Flight ID"></input>
+            <input type="number" class="input" name="number" placeholder="Flight number">
 
         </div>
 
         <div>
 
-            <input type="number" name="number" placeholder="Flight number"></input>
+            <textarea class="input {{ $errors->has('number') ? 'is-danger' : '' }}" name="from" placeholder="Flight from" required></textarea>
 
         </div>
 
         <div>
 
-            <textarea name="from" placeholder="Flight from"></textarea>
-
-        </div>
-
-        <div>
-
-            <textarea name="destination" placeholder="Flight destination"></textarea>
+            <textarea class="input {{ $errors->has('number') ? 'is-danger' : '' }}" name="destination" placeholder="Flight destination" required></textarea>
 
         </div>
 
@@ -40,6 +34,7 @@
             <button type="submit ">Create Flight</button>
 
         </div>
+
 
 
     </form>

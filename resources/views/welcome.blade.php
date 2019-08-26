@@ -10,6 +10,13 @@
         @endforeach
     </ul>
 
+    <div id="app">
+        <example-component></example-component>
+        <example-component></example-component>
+    </div>
+
+    <script src="{{ asset('js/app.js') }}"/>
+
 @endsection
 
 @section('title')
@@ -17,3 +24,4 @@
     HOME
 
 @endsection
+

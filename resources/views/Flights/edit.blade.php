@@ -8,7 +8,7 @@
 
     <h1 class="id">Edit Flight</h1>
 
-    <form method="POST" action="/flights/{{$flights->id}}">
+    <form method="POST" action="/flights/{{$flight->id}}">
 
         {{ method_field('PATCH')  }}
         {{ csrf_field() }}
@@ -18,7 +18,7 @@
             <label class="label" for="id">ID</label>
 
             <div class="control">
-                <textarea name="id" class="textarea">{{$flights->id}}</textarea>
+                <textarea name="id" class="textarea">{{$flight->id}}</textarea>
             </div>
 
 
@@ -29,7 +29,7 @@
             <label class="label" for="number">NUMBER</label>
 
             <div class="control">
-                <input type="number" class="input" name="number" placeholder="NUMBER" value="{{$flights->number}}">
+                <input type="number" class="input" name="number" placeholder="NUMBER" value="{{$flight->number}}">
             </div>
 
 
@@ -40,7 +40,7 @@
             <label class="label" for="From">FROM</label>
 
             <div class="control">
-                <input type="text" class="input" name="from" placeholder="FROM" value="{{$flights->from}}">
+                <input type="text" class="input" name="from" placeholder="FROM" value="{{$flight->from}}">
             </div>
 
 
@@ -51,7 +51,7 @@
             <label class="label" for="destination">DESTINATION</label>
 
             <div class="control">
-                <input type="text" class="input" name="destination" placeholder="DESTINATION" value="{{$flights->destination}}">
+                <input type="text" class="input" name="destination" placeholder="DESTINATION" value="{{$flight->destination}}">
             </div>
 
 
@@ -66,6 +66,26 @@
         </div>
 
     </form>
+
+
+    <form method="POST" action="/flights/{{$flight->id}}">
+
+        {{ method_field('DELETE')  }}
+        {{ csrf_field() }}
+
+        <div class="field">
+
+            <div class="control">
+                <button type="submit" class="button">DELETE FLIGHT</button>
+            </div>
+
+        </div>
+
+    </form>
+
+
+
+
 
 </body>
 </html>

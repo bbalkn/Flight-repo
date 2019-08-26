@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/app', function() {
+    return view('app');
+});
+
 Route::get('/', function () {
 
     $tasks = [
@@ -44,3 +48,9 @@ Route::post('/flights', 'FlightsController@store');
 Route::get('/flights/{flight}/edit', 'FlightsController@edit');
 Route::patch('/flights/{flight}', 'FlightsController@update');
 Route::delete('/flights/{flight}', 'FlightsController@destroy');*/
+
+//Route::patch('/tasks/{task}', 'ProjectTasksController@update');
+Route::post('/flights/{flight}/tasks', 'ProjectTasksController@store');
+
+Route::post('/completed-tasks/{task}', 'CompletedTasksController@store');
+Route::delete('/completed-tasks/{task}', 'CompletedTasksController@store');
